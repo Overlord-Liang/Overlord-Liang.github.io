@@ -1,1 +1,206 @@
 <!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="Description" content="OverlordGame is a part of Overlord Virtual Studio,which is committed to the production and development of games" />
+	<title>Overlord Games</title>
+	<link rel="shortcut icon" href="icons/mainicon.ico">
+	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
+	<style type="text/css">
+
+  html {
+    padding: 0 10%;
+  }
+
+	body {
+		font-size: 1.5em;
+		font-family: 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
+		margin: 0 auto;
+		max-width: 720px;
+	}
+	
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	
+	a:hover {
+		text-decoration: underline;
+	}
+	
+	a:visited {
+		color: black;
+	}
+
+	#full-banner {
+		display: none;
+	}
+
+	#full-banner,
+	#small-banner {
+		width: 100%;
+	}
+
+  #banner {
+    margin:0 0 30px;
+  }
+
+	#about {
+		text-align: center;
+	}
+
+	#games {
+		text-align: right;
+	}
+
+	.gameListing {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 20px 0;
+		color: white;
+		text-decoration: none;
+		overflow: hidden;
+		background-size: 100%;
+	}
+	
+	#gridland {
+		background-image: url(images/gridland.png);
+	}
+	
+	.gameListing:before {
+		display: block;
+		content: ' ';
+		padding-top: 100%;
+	}
+
+	.gameListing:after {
+		content: ' ';
+		display: block;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		bottom: 0px;
+		right: 0px;
+		border: 2px solid black;
+	}
+
+	.gameListing h3 {
+		margin: 0 0 5px 0;
+	}
+
+	.gameDetails {
+		position: absolute;
+		bottom: 0px;
+		padding: 10px;
+		background-color: rgba(0, 0, 0, 0.8);
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-o-box-sizing: border-box;
+		width: 100%;
+		color: white;
+		text-align: left;
+	}
+
+	#links {
+		z-index: 1;
+		position: sticky;
+		width: 100%;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		background: rgba(255, 255, 255, 0.95);
+		padding: 10px 0;
+	}
+
+	#links img {
+		width: 40px;
+		height: 40px;
+	}
+
+	#links a {
+		margin-left: 10px;
+	}
+
+	.icon-link {
+		font-size: 0;
+	}
+
+	@media screen and (min-width: 720px) {
+		#full-banner {
+			display: block;
+		}
+		#small-banner {
+			display: none;
+		}
+
+		.gameListing {
+			width: 45%;
+			margin: 2.5%;
+			display: inline-block;
+		}
+		.gameDetails {
+			transition: transform 200ms ease-out;
+			-webkit-transition: -webkit-transform 200ms ease-out;
+			-moz-transition: -moz-transform 200ms ease-out;
+			-ms-transition: -ms-transform 200ms ease-out;
+			-o-transition: -o-transform 200ms ease-out;
+			transform: translateY(100%);
+			-webkit-transform: translateY(100%);
+			-moz-transform: translateY(100%);
+			-ms-transform: translateY(100%);
+			-o-transform: translateY(100%);
+			font-size: 1em;
+		}
+
+		.gameListing:hover .gameDetails {
+			transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+		}
+
+		.gameDetails.coming-soon {
+			transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+    }
+
+    #games {
+		margin: 0 -2.5%;
+	}
+	}
+	</style>
+</head>
+
+<body>
+  <nav id="links">
+	<a target="_blank" class="icon-link" title="Overlord"><img src="images/Overlord.jpg" alt="Overlord"/></a>
+    <a target="_blank" href="Overlordindex.html">Overlord</a>
+	<a target="_blank" class="icon-link" title="OverlordGame"><img src="images/hello.gif" alt="OverlordGame"/></a>
+  </nav>
+  <h1 id="banner">
+	<img id="full-banner" src="images/title.png" alt="OverlordGame">
+  </h1>
+  <section id="games">
+	<a id='gridland' href="gridland_loading.html" class="gameListing" title="Gridland" target="_blank">
+		<div class="gameDetails">
+			<h3>Gridland</h3>
+			Match. Build. Survive.
+		</div>
+	</a>
+  </section>
+  <h1 id="banner">
+	<img id="full-banner" src="images/Overlord introduction.PNG" alt="Overlord Introduction">
+	<img id="full-banner" src="images/OverlordGame introduction.PNG" alt="OverlordGame Introduction">
+	<img id="full-banner" src="images/Liang introduction.PNG" alt="Liang introduction">
+  </h1>
+</body>
+</html>
