@@ -42,7 +42,7 @@ if (match) {
                 b(h, "click", function() {
                         e.fire(g, f)
                     }),
-                    j.innerHTML = d.isAndroid ? "GO" : "▶"
+                    j.innerHTML = d.isMobile ? "GO" : "▶"
             }
             var h = a.getElementsByClassName("button")[0],
                 i = a.getElementsByClassName("text")[0],
@@ -85,11 +85,11 @@ if (match) {
                 h = {
                     point: [0, 0],
                     enabled: !1,
-                    color: "#c8c8c8",
+                    color: "#FCCCFF",
                     update: function() {
                         var a = h.point,
                             c = 30;
-                        h.enabled && (0 === e ? (d = h.color, a[0] < b / 2 ? (a[0] = Math.min(a[0] + c, b / 2), h.point = a) : (h.point = a, g = !0)) : 1 === e && (d = "#000", a[0] > b / 2 ? (a[0] = Math.max(a[0] - c, b / 2), h.point = a) : (h.point = a, g = !0)))
+                        h.enabled && (0 === e ? (d = h.color, a[0] < b / 2 ? (a[0] = Math.min(a[0] + c, b / 2), h.point = a) : (h.point = a, g = !0)) : 1 === e && (d = "#F8F5EA", a[0] > b / 2 ? (a[0] = Math.max(a[0] - c, b / 2), h.point = a) : (h.point = a, g = !0)))
                     },
                     render: function() {
                         var e = h.point;
@@ -400,7 +400,7 @@ if (match) {
         function a(a, c, d, e, f) {
             function g() {
                 var c = b.getTextWidth(a, 0, 0, d, e);
-                b.drawText(a, i - c / 2, j + e / 3, d, e, "black")
+                b.drawText(a, i - c / 2, j + e / 3, d, e, "white")
             }
             var h, i = 0,
                 j = 0;
@@ -424,7 +424,7 @@ if (match) {
                             c
                     },
                     render: function(e) {
-                        b.drawCircle(a, i, j, c, "#ffffff"),
+                        b.drawCircle(a, i, j, c, "#0B0252"),
                             "undefined" != typeof d ? g(d) : "undefined" != typeof e && g(e)
                     },
                     destroy: function() {
@@ -516,7 +516,7 @@ if (match) {
                         var c, e = l.length,
                             f = a.width,
                             h = a.height;
-                        for (d.clearRect(0, 0, f, h), c = 0; e > c; c++) b.drawLine(d, n, o, l[c].ball.pos().x, l[c].ball.pos().y, "#ffffff", 1.5 * g),
+                        for (d.clearRect(0, 0, f, h), c = 0; e > c; c++) b.drawLine(d, n, o, l[c].ball.pos().x, l[c].ball.pos().y, "#0B0252", 1.5 * g),
                             l[c].ball.render();
                         i.render()
                     },
@@ -621,7 +621,7 @@ if (match) {
                 run: function(b) {
                     var c = g[b];
                     B = b,
-                        c ? (u.enabled = !0, n(c), a.style.backgroundColor = "#000", A = "run") : t()
+                        c ? (u.enabled = !0, n(c), a.style.backgroundColor = "#F8F5EA", A = "run") : t()
                 },
                 shot: function() {
                     x && x.ballList.length && x.popup()
