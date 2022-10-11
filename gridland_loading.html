@@ -66,6 +66,55 @@
       width:102.4px;
       height:102.4px;
     }
+
+	@media screen and (min-width: 720px) {
+		#full-banner {
+			display: block;
+		}
+		#small-banner {
+			display: none;
+		}
+
+		.gameListing {
+			width: 45%;
+			margin: 2.5%;
+			display: inline-block;
+		}
+		.gameDetails {
+			transition: transform 200ms ease-out;
+			-webkit-transition: -webkit-transform 200ms ease-out;
+			-moz-transition: -moz-transform 200ms ease-out;
+			-ms-transition: -ms-transform 200ms ease-out;
+			-o-transition: -o-transform 200ms ease-out;
+			transform: translateY(100%);
+			-webkit-transform: translateY(100%);
+			-moz-transform: translateY(100%);
+			-ms-transform: translateY(100%);
+			-o-transform: translateY(100%);
+			font-size: 1em;
+		}
+
+		.gameListing:hover .gameDetails {
+			transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+		}
+
+		.gameDetails.coming-soon {
+			transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+    	}
+
+ 	    #games {
+			margin: 0 -2.5%;
+		}
+	}
+
 	</style>
 	
 	<style>
