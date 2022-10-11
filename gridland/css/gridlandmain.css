@@ -1,3 +1,23 @@
 html {
 	height: 100%;
 }
+
+/* The background of the game*/
+/* The day of the game*/
+body {
+	height: 100%;
+	border-top: 1px solid black;
+	margin: -1px 0 0 0;
+	padding: 0px;
+	background-color: white;
+	transition: background-color 1400ms linear;
+	-webkit-transition: background-color 1400ms linear;
+	-moz-transition: background-color 1400ms linear;
+	-ms-transition: background-color 1400ms linear;
+	-o-transition: background-color 1400ms linear;
+}
+
+/*The night of the game*/
+body.night {
+	background-color: black;
+}
