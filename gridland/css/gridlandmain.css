@@ -99,3 +99,103 @@ body.paused:before {
 .titleScreen #pauseIcon {
 	display: none;
 }
+
+/*Test Part*/
+#test {
+	position: absolute;
+	left: 10px;
+	top: 40px;
+	display:inline-block; 
+	padding:5px; 
+	height: 10px;
+	width: 10px;
+	margin:auto;
+	border:1px solid black;
+	background-color: red;
+	z-index: 101;
+}
+
+.hidden {
+	opacity: 0 !important;
+	cursor: default !important;
+	transition: opacity 200ms linear !important;
+	-webkit-transition: opacity 200ms linear !important;
+	-moz-transition: opacity 200ms linear !important;
+	-ms-transition: opacity 200ms linear !important;
+	-o-transition: opacity 200ms linear !important;
+}
+
+#gameContainer {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	margin-left: -244px;
+	z-index: 1;
+}
+
+/** Loading Screen **/
+#loadingScreen {
+	z-index: 100;
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+    width: 600px;
+    height: 300px;
+    background: url(image/Gridlandtitle.png) top left no-repeat;
+    transition: opacity 700ms linear;
+    -webkit-transition: opacity 700ms linear;
+    -moz-transition: opacity 700ms linear;
+    -ms-transition: opacity 700ms linear;
+    -o-transition: opacity 700ms linear;
+}
+
+#loadingScreen.hidden {
+	z-index: -1;
+}
+
+#loadingScreen .saveSpinner {
+	width: 80px;
+	height: 80px;
+	opacity: 1;
+	width: 80px;
+    bottom: 0px;
+    top: auto;
+    left: 50%;
+    margin-left: -40px;
+}
+
+.longload {
+	position: absolute;
+    bottom: -100px;
+    font-size: 1.5em;
+    line-height: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.longload a {
+	display: block;
+}
+
+@media screen and (min-height: 860px) {
+	#loadingScreen {
+		top:20%
+	}
+}
+
+@media screen and (max-height: 860px) {
+	#loadingScreen {
+		top: 5%;
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.saveSlots {
+		transform: scale(1.5);
+		-webkit-transform: scale(1.5);
+		-moz-transform: scale(1.5);
+		-ms-transform: scale(1.5);
+		-o-transform: scale(1.5);
+		top: 175px;
+	}
+}
