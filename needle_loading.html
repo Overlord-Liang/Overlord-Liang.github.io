@@ -2,20 +2,38 @@
 <html>
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
 	<meta name="Description" content="OverlordGame is a part of Overlord Virtual Studio,which is committed to the production and development of games" />
-	<title>Gridland</title>
+	<meta http-equiv="refresh" content="5;URL=needle/needle.html">
+	<title>Needle</title>
 	<link rel="shortcut icon" href="icons/needle.ico">
 	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
 	<style type="text/css">
-        
+    
+	html {
+		padding: 0 10%
+	}
+
     body {
 		background-color: #FFF;
 		color: #000;
+		font:normal 100% Helvetica,Arial,sans-serif;
 		font-size: 1.5em;
 		font-family: 'Open Sans Condensed', Verdana, Helvetica, sans-serif;
 		margin: 0 auto;
 		max-width: 1020px;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+	
+	small {
+		font-size: 0.875em;
+	}
+
+	img{
+		max-width: 100%;
 	}
 
     a {
@@ -30,8 +48,8 @@
 	a:visited {
 		color: black;
 	}
-	
-		#links {
+
+	#links {
 		z-index: 1;
 		position: sticky;
 		width: 100%;
@@ -56,16 +74,54 @@
 	b {
       color: #000;
     }
-		div {
-			width: 960px;
-			margin: auto;
-			text-align: center;
-			margin-top: 20px;
-		}
+	
+	div {
+		width: 960px;
+		margin: auto;
+		text-align: center;
+		margin-top: 20px;
+	}
+
     .browser {
-      width:102.4px;
-      height:102.4px;
+      	width:102.4px;
+      	height:102.4px;
     }
+
+	/*添加的测试行*/
+
+	#full-banner {
+		display: none;
+	}
+
+	#full-banner,
+	#small-banner {
+		width: 100%;
+	}
+
+	@media screen and (min-width: 720px) {
+		#full-banner {
+			display: block;
+		}
+		#small-banner {
+			display: none;
+		}
+	}
+	
+	@media screen and (max-width: 720px) {
+		#full-banner {
+			display: none;
+		}
+		#small-banner {
+			display: block;
+		}
+
+		.browser {
+			width: 51.2px;
+      		height: 51.2px;
+		}
+	}
+
+	/*添加的测试行*/
 	
 	</style>
 	
@@ -84,36 +140,45 @@
 
 <body>
     <nav id="links">
+		<a target="_blank" class="icon-link" title="Overlord"><img src="images/Overlord.jpg" alt="Overlord"/></a>
         <a target="_blank" href="index.html">OverlordGame</a>
         <a target="_blank" class="icon-link" title="Hello"><img src="images/hello.gif" alt="Hello"/></a>
-        <a target="_blank" class="icon-link" title="Block"><img src="images/block.PNG" alt="Block"/></a>
-        <a target="_blank" class="icon-link" title="Block"><img src="images/block.PNG" alt="Block"/></a>
-        <a target="_blank" class="icon-link" title="Block"><img src="images/block.PNG" alt="Block"/></a>
-        <a target="_blank" class="icon-link" title="Block"><img src="images/block.PNG" alt="Block"/></a>
       </nav>
 </body>
+
 <center>
-    <img src="images/needletitle.png" />
-    <div>
-        <strong style="display:block;margin-bottom:20px;">
-            Gridland makes use of HTML5 and CSS3,<br/>
-            so please make sure that your current browser appears to support.<br/>
-            Please use fellow brwosers for the best experience:<br/>
-        </strong>
-        <b><img class="browser" src='images/firefox.png' alt='Firefox' title='Firefox' /></b>
-	    <b><img class="browser" src='images/chrome.png' alt='Chrome' title='Chrome' /></b>
-        <b><img class="browser" src='images/edge.png' alt='Microsoft Edge' title='Microsoft Edge' /></b>
-        <b><img class="browser" src='images/opera.png' alt='Opera' title='Opera' /></b>
-        <b><img class="browser" src='images/safari.png' alt='Safari' title='Safari' /></b>
-	<br/><br/><br/><br/>
-	The game is loading now...Please wait for some time^_^
-	  <br/><br/>
-	  <img src="images/Liang introduction.PNG" />
-	  <br/>
-	  <strong style="display:block;margin-bottom:20px;">
-	    Click <a href='needle/needle.html'>HERE</a> and start playing!
-	  </strong>
-    </div>
+	<h1>
+		<img src="images/needletitle.png"/>
+	</h1>
+	
+	<strong id="full-banner" style="margin-bottom: 20px;">
+		Gridland makes use of HTML5 and CSS3,<br/>
+		so please make sure that your current browser appears to support.<br/>
+		Please use fellow brwosers for the best experience:<br/>
+	</strong>
+	<strong id="small-banner" style="margin-bottom: 20px;">
+		Gridland makes use of HTML5 and CSS3,
+		so please make sure that your current browser appears to support.<br/>
+		Please use fellow brwosers for the best experience:
+	</strong>
+	
+	<b><img class="browser" src='images/firefox.png' alt='Firefox' title='Firefox' /></b>
+	<b><img class="browser" src='images/chrome.png' alt='Chrome' title='Chrome' /></b>
+    <b><img class="browser" src='images/edge.png' alt='Microsoft Edge' title='Microsoft Edge' /></b>
+    <b><img class="browser" src='images/opera.png' alt='Opera' title='Opera' /></b>
+    <b><img class="browser" src='images/safari.png' alt='Safari' title='Safari' /></b>
+
+	<br/><br/>
+	<div id="full-banner">
+		The game is loading now...Please wait for some time^_^
+	</div>
+	<div id="small-banner">
+		The game is loading now...<br/>
+		Please wait for some time^_^
+	</div>
+	<img src="images/loading.gif" />
+	<br/>
+
+	<img src="images/Liang introduction.PNG" /><br/>
+
 </center>
-    
-</html>
