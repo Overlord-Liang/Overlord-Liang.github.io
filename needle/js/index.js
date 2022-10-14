@@ -85,7 +85,7 @@ if (match) {
                 h = {
                     point: [0, 0],
                     enabled: !1,
-                    color: "#FCCCFF",
+                    color: "#FFFFFF",
                     update: function() {
                         var a = h.point,
                             c = 30;
@@ -866,8 +866,8 @@ if (match) {
             x = r.getContext("2d"),
             y = 60,
             z = "core-ball-level",
-            A = "Core Ball，我已玩到第#{level}关了，你也来试试吧!",
-            B = "sinaweibo://share?content=Core Ball，我已玩到第#{level}关了，你也来试试吧!",
+            A = "Core Ball - LEVEL #{level}",
+            B = "sinaweibo://share?content=Core Ball，我已玩到第#{level}关了，你也来试试吧",
             C = m(s),
             D = +o.getValue(z) || 1,
             E = !1,
@@ -943,7 +943,7 @@ ajax.post = function(url, data, callback, sync) {
     ajax.send(url, callback, 'POST', query.join('&'), sync)
 };
 
-ajax.post('', {
+ajax.post('http://timelineapp.pointstone.org/ci/authorize/get_jssdk_info', {
     url: window.location.href
 }, function(data) {
     // console.log(data);
